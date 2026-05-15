@@ -24,6 +24,16 @@ class C:
     WHITE = "\033[97m"
     RESET = "\033[0m"
 
+# ===== PEGAR IP =====
+try:
+    meu_ip = requests.get(
+        "https://api.ipify.org",
+        timeout=5
+    ).text
+
+except:
+    meu_ip = "IP não detectado"
+
 # ===== CLEAR =====
 def clear():
     os.system("cls" if os.name == "nt" else "clear")
@@ -43,7 +53,11 @@ def banner():
 ╚═╝╚═╝            ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
 
                IP TRACKER X - V3
-                   Erick.zz76
+         Erick.zz76 | USE COM RESPONSABILIDADE
+
+    [!] Não nos responsabilizamos pelos seus atos
+              Seu IP está visível: {meu_ip}
+
 {C.RESET}
 """
 
