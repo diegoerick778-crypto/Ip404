@@ -1,0 +1,8 @@
+## Run
+
+```bash
+git clone https://github.com/diegoerick778-crypto/ip404.git
+cd ip404
+chmod +x ip404.dat
+./ip404.dat
+```
